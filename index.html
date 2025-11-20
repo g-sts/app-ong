@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONG dedicada a transformar vidas através da educação, saúde e desenvolvimento comunitário">
+    <title>Esperança Viva - Transformando Vidas</title>
+    
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Navegação principal">
+                <div class="navbar__brand">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    <span>Esperança Viva</span>
+                </div>
+                
+                <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="navbar__menu">
+                    <li><a href="index.html" class="navbar__link active" data-page="index">Início</a></li>
+                    <li><a href="projetos.html" class="navbar__link" data-page="projetos">Projetos</a></li>
+                    <li><a href="cadastro.html" class="navbar__link" data-page="cadastro">Cadastro</a></li>
+                    <li><a href="#contato" class="navbar__link">Contato</a></li>
+                    <li>
+                        <button class="btn btn--primary btn--sm" onclick="window.location.href='#doar'">Doar Agora</button>
+                    </li>
+                    <li>
+                        <button class="theme-toggle" aria-label="Alternar tema escuro" title="Alternar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app" role="main">
+        <section class="hero">
+            <div class="hero__content">
+                <div class="container">
+                    <div class="hero__text">
+                        <h1 class="hero__title">Transformando Vidas Através da Solidariedade</h1>
+                        <p class="hero__subtitle">Juntos, podemos construir um futuro melhor para comunidades carentes através de educação, saúde e desenvolvimento sustentável.</p>
+                        <div class="hero__actions">
+                            <button class="btn btn--primary btn--lg" onclick="window.location.href='#doar'">Fazer Doação</button>
+                            <button class="btn btn--secondary btn--lg" onclick="window.location.href='/projetos'">Conheça Nossos Projetos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=800&fit=crop" alt="Pessoas trabalhando juntas em projeto comunitário" loading="lazy">
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats__grid">
+                    <div class="stat-card">
+                        <i class="fas fa-users stat-card__icon" aria-hidden="true"></i>
+                        <div class="stat-card__number" data-count="15000">0</div>
+                        <div class="stat-card__label">Vidas Impactadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-project-diagram stat-card__icon" aria-hidden="true"></i>
+                        <div class="stat-card__number" data-count="47">0</div>
+                        <div class="stat-card__label">Projetos Ativos</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-hands-helping stat-card__icon" aria-hidden="true"></i>
+                        <div class="stat-card__number" data-count="320">0</div>
+                        <div class="stat-card__label">Voluntários</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-globe-americas stat-card__icon" aria-hidden="true"></i>
+                        <div class="stat-card__number" data-count="12">0</div>
+                        <div class="stat-card__label">Comunidades</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission" id="missao">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossa Essência</h2>
+                    <p class="section-subtitle">Os valores que guiam nosso trabalho diário</p>
+                </div>
+                
+                <div class="mission__grid">
+                    <article class="value-card">
+                        <div class="value-card__icon">
+                            <i class="fas fa-bullseye" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="value-card__title">Missão</h3>
+                        <p class="value-card__text">Promover a transformação social através de projetos educacionais, de saúde e desenvolvimento comunitário, proporcionando oportunidades para pessoas em situação de vulnerabilidade social.</p>
+                    </article>
+                    
+                    <article class="value-card">
+                        <div class="value-card__icon">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="value-card__title">Visão</h3>
+                        <p class="value-card__text">Ser referência nacional em desenvolvimento social sustentável, expandindo nosso impacto para alcançar 100 mil vidas transformadas até 2030, com transparência e eficiência.</p>
+                    </article>
+                    
+                    <article class="value-card">
+                        <div class="value-card__icon">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="value-card__title">Valores</h3>
+                        <ul class="value-card__list">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Solidariedade e empatia</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Transparência total</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Respeito à diversidade</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Sustentabilidade</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Compromisso com resultados</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="history" id="historia">
+            <div class="container">
+                <div class="history__content">
+                    <div class="history__text">
+                        <h2 class="section-title">Nossa História</h2>
+                        <p>Fundada em 2010, a <strong>Esperança Viva</strong> nasceu do sonho de um grupo de voluntários que acreditavam que pequenas ações poderiam gerar grandes transformações.</p>
+                        
+                        <p>Começamos com um único projeto educacional em uma comunidade carente de São Paulo, atendendo 30 crianças. Hoje, somos uma organização com alcance nacional, com projetos em 12 estados brasileiros.</p>
+                        
+                        <p>Ao longo desses 14 anos, desenvolvemos programas inovadores nas áreas de educação, saúde preventiva, capacitação profissional e desenvolvimento comunitário. Cada projeto é desenhado em parceria com as comunidades, respeitando suas particularidades e necessidades.</p>
+                        
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <div class="timeline__year">2010</div>
+                                <div class="timeline__desc">Fundação da ONG</div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__year">2015</div>
+                                <div class="timeline__desc">Expansão para 5 estados</div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__year">2020</div>
+                                <div class="timeline__desc">10.000 vidas impactadas</div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__year">2024</div>
+                                <div class="timeline__desc">Presença nacional</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="history__image">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=800&fit=crop" alt="Voluntários trabalhando com crianças" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team" id="equipe">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossa Equipe</h2>
+                    <p class="section-subtitle">Pessoas dedicadas a fazer a diferença</p>
+                </div>
+                
+                <div class="team__grid">
+                    <article class="team-card">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="Ana Silva" loading="lazy">
+                        </div>
+                        <h3 class="team-card__name">Ana Silva</h3>
+                        <p class="team-card__role">Diretora Executiva</p>
+                        <p class="team-card__bio">15 anos de experiência em gestão de ONGs e desenvolvimento social.</p>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn de Ana Silva"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Email de Ana Silva"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="team-card">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" alt="Carlos Mendes" loading="lazy">
+                        </div>
+                        <h3 class="team-card__name">Carlos Mendes</h3>
+                        <p class="team-card__role">Coordenador de Projetos</p>
+                        <p class="team-card__bio">Especialista em gestão de projetos sociais e captação de recursos.</p>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn de Carlos Mendes"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Email de Carlos Mendes"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="team-card">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop" alt="Mariana Costa" loading="lazy">
+                        </div>
+                        <h3 class="team-card__name">Mariana Costa</h3>
+                        <p class="team-card__role">Coordenadora de Voluntários</p>
+                        <p class="team-card__bio">Psicóloga com foco em desenvolvimento de equipes e engajamento.</p>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn de Mariana Costa"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Email de Mariana Costa"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="team-card">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" alt="Roberto Santos" loading="lazy">
+                        </div>
+                        <h3 class="team-card__name">Roberto Santos</h3>
+                        <p class="team-card__role">Diretor Financeiro</p>
+                        <p class="team-card__bio">Contador com MBA em Gestão Financeira e Terceiro Setor.</p>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn de Roberto Santos"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Email de Roberto Santos"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contato">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p class="section-subtitle">Estamos aqui para ouvir você</p>
+                </div>
+                
+                <div class="contact__grid">
+                    <div class="contact__info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <h3>Endereço</h3>
+                                <p>Av. Paulista, 1234 - Bela Vista<br>São Paulo - SP, 01310-100</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <h3>Telefone</h3>
+                                <p>(11) 3456-7890<br>(11) 98765-4321</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>contato@esperancaviva.org.br<br>voluntarios@esperancaviva.org.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <h3>Horário de Atendimento</h3>
+                                <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact__form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Nome Completo</label>
+                            <input type="text" id="contact-name" class="form-input" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">Email</label>
+                            <input type="email" id="contact-email" class="form-input" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject" class="form-label">Assunto</label>
+                            <select id="contact-subject" class="form-input" required aria-required="true">
+                                <option value="">Selecione...</option>
+                                <option value="duvida">Dúvida Geral</option>
+                                <option value="voluntario">Quero ser Voluntário</option>
+                                <option value="doacao">Informações sobre Doação</option>
+                                <option value="parceria">Parceria</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">Mensagem</label>
+                            <textarea id="contact-message" class="form-input" rows="5" required aria-required="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--block">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span>Esperança Viva</span>
+                    </div>
+                    <p class="footer__text">Transformando vidas através da solidariedade desde 2010.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Links Rápidos</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Início</a></li>
+                        <li><a href="/projetos">Projetos</a></li>
+                        <li><a href="/cadastro">Cadastro</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Transparência</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Relatório Anual</a></li>
+                        <li><a href="#">Demonstrações Financeiras</a></li>
+                        <li><a href="#">Estatuto Social</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Newsletter</h3>
+                    <p class="footer__text">Receba novidades sobre nossos projetos</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Seu email" required aria-label="Email para newsletter">
+                        <button type="submit" class="btn btn--primary" aria-label="Inscrever na newsletter">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Esperança Viva. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
