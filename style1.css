@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    text-align: center;
+    color: #0054A6;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn--primary {
+    background-color: #0054A6;
+    color: #fff;
+}
+
+.btn--secondary {
+    background-color: #fff;
+    border: 2px solid #0054A6;
+    color: #0054A6;
+}
+
+.btn--primary:hover {
+    background-color: #003d7a;
+}
+
+.btn--secondary:hover {
+    background-color: #0054A6;
+    color: #fff;
+}
+
+.btn--lg {
+    padding: 14px 28px;
+    font-size: 1rem;
+}
+
+.btn--block {
+    width: 100%;
+}
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #0054A6;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+    color: #0054A6;
+}
+
+.navbar__toggle {
+    display: none;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #0054A6;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f4f9ff;
+    align-items: center;
+}
+
+.hero__content {
+    padding: 60px 0;
+}
+
+.hero__title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    color: #0054A6;
+    margin-bottom: 20px;
+}
+
+.hero__subtitle {
+    max-width: 500px;
+    margin-bottom: 28px;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 20px;
+}
+
+.stats {
+    padding: 60px 0;
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.stat-card {
+    background-color: #f4f9ff;
+    text-align: center;
+    padding: 28px 10px;
+    border-radius: 10px;
+}
+
+.stat-card__icon {
+    font-size: 2rem;
+    color: #0054A6;
+}
+
+.stat-card__number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.stat-card__label {
+    color: #555;
+}
+
+.mission {
+    padding: 70px 0;
+}
+
+.mission__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.value-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 28px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.value-card__icon i {
+    font-size: 2rem;
+    color: #0054A6;
+}
+
+.value-card__title {
+    font-size: 1.4rem;
+    margin: 16px 0;
+}
+
+.value-card__list {
+    list-style: none;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.value-card__list li {
+    margin-bottom: 8px;
+}
+
+.value-card__list i {
+    color: #0054A6;
+    margin-right: 6px;
+}
+
+.history {
+    padding: 70px 0;
+}
+
+.history__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.timeline {
+    margin-top: 20px;
+    border-left: 3px solid #0054A6;
+    padding-left: 20px;
+}
+
+.timeline__item {
+    margin-bottom: 20px;
+}
+
+.timeline__year {
+    font-weight: 700;
+    color: #0054A6;
+    font-size: 1.2rem;
+}
+
+.team {
+    padding: 70px 0;
+}
+
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team-card__image img {
+    border-radius: 50%;
+}
+
+.team-card__name {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #0054A6;
+}
+
+.team-card__role {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.team-card__social a {
+    font-size: 1.2rem;
+    color: #0054A6;
+    margin: 0 8px;
+}
+
+.contact {
+    padding: 70px 0;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    font-size: 1.4rem;
+    color: #0054A6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+}
+
+
+.footer {
+    background-color: #0054A6;
+    color: #ffffff;
+    padding: 60px 0 40px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.footer__links {
+    list-style: none;
+}
+
+.footer__links li {
+    margin-bottom: 8px;
+}
+
+.footer__links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer__social a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.footer__bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .stats__grid,
+    .mission__grid,
+    .team__grid,
+    .footer__grid,
+    .history__content,
+    .contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar__menu {
+        display: none;
+    }
+
+    .navbar__toggle {
+        display: block;
+    }
+}
