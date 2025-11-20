@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como voluntário ou doador da Esperança Viva">
+    <title>Cadastro - Esperança Viva</title>
+    
+    <link rel="stylesheet" href="style3.css">
+    
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Navegação principal">
+                <div class="navbar__brand">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    <span>Esperança Viva</span>
+                </div>
+                
+                <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="navbar__menu">
+                    <li><a href="index.html" class="navbar__link" data-page="index">Início</a></li>
+                    <li><a href="projetos.html" class="navbar__link" data-page="projetos">Projetos</a></li>
+                    <li><a href="cadastro.html" class="navbar__link active" data-page="cadastro">Cadastro</a></li>
+                    <li><a href="#contato" class="navbar__link">Contato</a></li>
+                    <li>
+                        <button class="btn btn--primary btn--sm" onclick="window.location.href='/projetos#doar'">Doar Agora</button>
+                    </li>
+                    <li>
+                        <button class="theme-toggle" aria-label="Alternar tema escuro" title="Alternar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app" role="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Cadastro de Voluntário</h1>
+                <p class="page-header__subtitle">Preencha o formulário abaixo para fazer parte da nossa equipe</p>
+            </div>
+        </section>
+
+        <section class="registration">
+            <div class="container">
+                <div class="registration__wrapper">
+                    <form id="registrationForm" class="registration-form" novalidate>
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                                Informações Pessoais
+                            </legend>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName" class="form-label">Nome Completo <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="fullName" 
+                                        name="fullName" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        minlength="3"
+                                        aria-describedby="fullName-error"
+                                    >
+                                    <span class="form-error" id="fullName-error" role="alert"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">E-mail <span class="required">*</span></label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="email-error"
+                                    >
+                                    <span class="form-error" id="email-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cpf" class="form-label">CPF <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="cpf" 
+                                        name="cpf" 
+                                        class="form-input" 
+                                        placeholder="000.000.000-00"
+                                        required 
+                                        aria-required="true"
+                                        maxlength="14"
+                                        aria-describedby="cpf-error"
+                                    >
+                                    <span class="form-error" id="cpf-error" role="alert"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Telefone <span class="required">*</span></label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        class="form-input" 
+                                        placeholder="(00) 00000-0000"
+                                        required 
+                                        aria-required="true"
+                                        maxlength="15"
+                                        aria-describedby="phone-error"
+                                    >
+                                    <span class="form-error" id="phone-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="birthDate" class="form-label">Data de Nascimento <span class="required">*</span></label>
+                                    <input 
+                                        type="date" 
+                                        id="birthDate" 
+                                        name="birthDate" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        max="2006-12-31"
+                                        aria-describedby="birthDate-error"
+                                    >
+                                    <span class="form-error" id="birthDate-error" role="alert"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                Endereço
+                            </legend>
+                            
+                            <div class="form-row">
+                                <div class="form-group form-group--small">
+                                    <label for="cep" class="form-label">CEP <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="cep" 
+                                        name="cep" 
+                                        class="form-input" 
+                                        placeholder="00000-000"
+                                        required 
+                                        aria-required="true"
+                                        maxlength="9"
+                                        aria-describedby="cep-error"
+                                    >
+                                    <span class="form-error" id="cep-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="street" class="form-label">Endereço <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="street" 
+                                        name="street" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="street-error"
+                                    >
+                                    <span class="form-error" id="street-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group form-group--small">
+                                    <label for="number" class="form-label">Número <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="number" 
+                                        name="number" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="number-error"
+                                    >
+                                    <span class="form-error" id="number-error" role="alert"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="complement" class="form-label">Complemento</label>
+                                    <input 
+                                        type="text" 
+                                        id="complement" 
+                                        name="complement" 
+                                        class="form-input"
+                                    >
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="neighborhood" class="form-label">Bairro <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="neighborhood" 
+                                        name="neighborhood" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="neighborhood-error"
+                                    >
+                                    <span class="form-error" id="neighborhood-error" role="alert"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city" class="form-label">Cidade <span class="required">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        id="city" 
+                                        name="city" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="city-error"
+                                    >
+                                    <span class="form-error" id="city-error" role="alert"></span>
+                                </div>
+                                
+                                <div class="form-group form-group--small">
+                                    <label for="state" class="form-label">Estado <span class="required">*</span></label>
+                                    <select 
+                                        id="state" 
+                                        name="state" 
+                                        class="form-input" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="state-error"
+                                    >
+                                        <option value="">Selecione...</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                    <span class="form-error" id="state-error" role="alert"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">
+                                <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                                Informações de Voluntariado
+                            </legend>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Áreas de Interesse <span class="required">*</span></label>
+                                <div class="checkbox-group" role="group" aria-describedby="interests-error">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="educacao" aria-label="Educação">
+                                        <span>Educação</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="saude" aria-label="Saúde">
+                                        <span>Saúde</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="capacitacao" aria-label="Capacitação Profissional">
+                                        <span>Capacitação Profissional</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="comunidade" aria-label="Desenvolvimento Comunitário">
+                                        <span>Desenvolvimento Comunitário</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="eventos" aria-label="Eventos e Campanhas">
+                                        <span>Eventos e Campanhas</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="administrativo" aria-label="Apoio Administrativo">
+                                        <span>Apoio Administrativo</span>
+                                    </label>
+                                </div>
+                                <span class="form-error" id="interests-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="availability" class="form-label">Disponibilidade <span class="required">*</span></label>
+                                <select 
+                                    id="availability" 
+                                    name="availability" 
+                                    class="form-input" 
+                                    required 
+                                    aria-required="true"
+                                    aria-describedby="availability-error"
+                                >
+                                    <option value="">Selecione...</option>
+                                    <option value="weekdays-morning">Dias de semana - Manhã</option>
+                                    <option value="weekdays-afternoon">Dias de semana - Tarde</option>
+                                    <option value="weekdays-night">Dias de semana - Noite</option>
+                                    <option value="weekends">Finais de semana</option>
+                                    <option value="flexible">Horário flexível</option>
+                                </select>
+                                <span class="form-error" id="availability-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="skills" class="form-label">Habilidades e Experiências</label>
+                                <textarea 
+                                    id="skills" 
+                                    name="skills" 
+                                    class="form-input" 
+                                    rows="4"
+                                    placeholder="Conte-nos sobre suas habilidades, experiências profissionais ou acadêmicas que possam contribuir com nossos projetos..."
+                                ></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="motivation" class="form-label">Por que deseja ser voluntário? <span class="required">*</span></label>
+                                <textarea 
+                                    id="motivation" 
+                                    name="motivation" 
+                                    class="form-input" 
+                                    rows="4"
+                                    required 
+                                    aria-required="true"
+                                    minlength="20"
+                                    aria-describedby="motivation-error"
+                                    placeholder="Compartilhe sua motivação para fazer parte da nossa equipe..."
+                                ></textarea>
+                                <span class="form-error" id="motivation-error" role="alert"></span>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">
+                                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                Termos e Privacidade
+                            </legend>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label checkbox-label--block">
+                                    <input 
+                                        type="checkbox" 
+                                        name="terms" 
+                                        id="terms" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="terms-error"
+                                    >
+                                    <span>Li e aceito os <a href="#" target="_blank">Termos de Uso</a> e a <a href="#" target="_blank">Política de Privacidade</a> <span class="required">*</span></span>
+                                </label>
+                                <span class="form-error" id="terms-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label checkbox-label--block">
+                                    <input 
+                                        type="checkbox" 
+                                        name="newsletter" 
+                                        id="newsletter"
+                                    >
+                                    <span>Desejo receber novidades e informações sobre os projetos por email</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn--secondary" onclick="resetForm()">Limpar Formulário</button>
+                            <button type="submit" class="btn btn--primary btn--lg">Enviar Cadastro</button>
+                        </div>
+                    </form>
+                    
+                    <aside class="registration-info">
+                        <div class="info-card">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            <h3>Como Funciona</h3>
+                            <ol class="info-list">
+                                <li>Preencha o formulário com suas informações</li>
+                                <li>Nossa equipe analisará seu cadastro</li>
+                                <li>Você receberá um email com mais informações</li>
+                                <li>Participe do treinamento inicial</li>
+                                <li>Comece a fazer a diferença!</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-headset" aria-hidden="true"></i>
+                            <h3>Precisa de Ajuda?</h3>
+                            <p>Entre em contato conosco:</p>
+                            <ul class="contact-list">
+                                <li>
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    voluntarios@esperancaviva.org.br
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    (11) 3456-7890
+                                </li>
+                                <li>
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                    (11) 98765-4321
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card info-card--highlight">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <h3>Você Sabia?</h3>
+                            <p>Nossos voluntários relatam aumento significativo em satisfação pessoal, networking profissional e desenvolvimento de novas habilidades.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span>Esperança Viva</span>
+                    </div>
+                    <p class="footer__text">Transformando vidas através da solidariedade desde 2010.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Links Rápidos</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Início</a></li>
+                        <li><a href="/projetos">Projetos</a></li>
+                        <li><a href="/cadastro">Cadastro</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Transparência</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Relatório Anual</a></li>
+                        <li><a href="#">Demonstrações Financeiras</a></li>
+                        <li><a href="#">Estatuto Social</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title">Newsletter</h3>
+                    <p class="footer__text">Receba novidades sobre nossos projetos</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Seu email" required aria-label="Email para newsletter">
+                        <button type="submit" class="btn btn--primary" aria-label="Inscrever na newsletter">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Esperança Viva. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
